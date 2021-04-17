@@ -637,21 +637,21 @@ Wire Wire Line
 Wire Wire Line
 	6000 2400 6200 2400
 $Comp
-L Connector:Conn_ARM_JTAG_SWD_10 J?
+L Connector:Conn_ARM_JTAG_SWD_10 J6
 U 1 1 60860373
 P 8100 1500
-F 0 "J?" H 7657 1546 50  0000 R CNN
+F 0 "J6" H 7657 1546 50  0000 R CNN
 F 1 "JTAG" H 7657 1455 50  0000 R CNN
-F 2 "" H 8100 1500 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 8100 1500 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 7750 250 50  0001 C CNN
 	1    8100 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0117
 U 1 1 60863F1F
 P 8100 800
-F 0 "#PWR?" H 8100 650 50  0001 C CNN
+F 0 "#PWR0117" H 8100 650 50  0001 C CNN
 F 1 "+3V3" H 8115 973 50  0000 C CNN
 F 2 "" H 8100 800 50  0001 C CNN
 F 3 "" H 8100 800 50  0001 C CNN
@@ -659,10 +659,10 @@ F 3 "" H 8100 800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0118
 U 1 1 608644AF
 P 8100 2300
-F 0 "#PWR?" H 8100 2050 50  0001 C CNN
+F 0 "#PWR0118" H 8100 2050 50  0001 C CNN
 F 1 "GND" H 8105 2127 50  0000 C CNN
 F 2 "" H 8100 2300 50  0001 C CNN
 F 3 "" H 8100 2300 50  0001 C CNN
@@ -700,4 +700,44 @@ Wire Wire Line
 	8600 1600 8900 1600
 Wire Wire Line
 	8900 1700 8600 1700
+Text Label 1100 1800 0    50   ~ 0
+0
+Text Label 1100 2000 0    50   ~ 0
+1
+Wire Wire Line
+	1100 2000 1300 2000
+Wire Wire Line
+	1100 1800 1300 1800
+Text Label 2900 1400 2    50   ~ 0
+A4
+Text Label 2900 1500 2    50   ~ 0
+A5
+Text Label 2900 1600 2    50   ~ 0
+A2
+Text Label 2900 1700 2    50   ~ 0
+A3
+Text Label 2900 1800 2    50   ~ 0
+A0
+Text Label 2900 1900 2    50   ~ 0
+A1
+Wire Wire Line
+	2900 1400 2700 1400
+Wire Wire Line
+	2700 1500 2900 1500
+Wire Wire Line
+	2900 1600 2700 1600
+Wire Wire Line
+	2700 1700 2900 1700
+Wire Wire Line
+	2900 1800 2700 1800
+Wire Wire Line
+	2700 1900 2900 1900
+Text Label 2900 2100 2    50   ~ 0
+2
+Text Label 2900 2000 2    50   ~ 0
+3
+Wire Wire Line
+	2900 2000 2700 2000
+Wire Wire Line
+	2700 2100 2900 2100
 $EndSCHEMATC

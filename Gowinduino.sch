@@ -700,4 +700,80 @@ Wire Wire Line
 	8600 1600 8900 1600
 Wire Wire Line
 	8900 1700 8600 1700
+Text Label 1100 1800 0    50   ~ 0
+0
+Text Label 1100 2000 0    50   ~ 0
+1
+Wire Wire Line
+	1100 2000 1300 2000
+Wire Wire Line
+	1100 1800 1300 1800
+Text Label 2900 1400 2    50   ~ 0
+A4
+Text Label 2900 1500 2    50   ~ 0
+A5
+Text Label 2900 1600 2    50   ~ 0
+A2
+Text Label 2900 1700 2    50   ~ 0
+A3
+Text Label 2900 1800 2    50   ~ 0
+A0
+Text Label 2900 1900 2    50   ~ 0
+A1
+Wire Wire Line
+	2900 1400 2700 1400
+Wire Wire Line
+	2700 1500 2900 1500
+Wire Wire Line
+	2900 1600 2700 1600
+Wire Wire Line
+	2700 1700 2900 1700
+Wire Wire Line
+	2900 1800 2700 1800
+Wire Wire Line
+	2700 1900 2900 1900
+Text Label 2900 2100 2    50   ~ 0
+2
+Text Label 2900 2000 2    50   ~ 0
+3
+Wire Wire Line
+	2900 2000 2700 2000
+Wire Wire Line
+	2700 2100 2900 2100
+Text Label 3600 2000 0    50   ~ 0
+4
+Text Label 3600 1900 0    50   ~ 0
+5
+Text Label 3600 1800 0    50   ~ 0
+6
+Text Label 3600 1700 0    50   ~ 0
+7
+Text Label 3600 1600 0    50   ~ 0
+8
+Text Label 3600 1500 0    50   ~ 0
+9
+Text Label 3600 1400 0    50   ~ 0
+10
+Text Label 3600 1300 0    50   ~ 0
+11
+Text Label 3600 1200 0    50   ~ 0
+12
+Wire Wire Line
+	3600 1200 3800 1200
+Wire Wire Line
+	3800 1300 3600 1300
+Wire Wire Line
+	3600 1400 3800 1400
+Wire Wire Line
+	3800 1500 3600 1500
+Wire Wire Line
+	3600 1600 3800 1600
+Wire Wire Line
+	3800 1700 3600 1700
+Wire Wire Line
+	3600 1800 3800 1800
+Wire Wire Line
+	3800 1900 3600 1900
+Wire Wire Line
+	3600 2000 3800 2000
 $EndSCHEMATC
