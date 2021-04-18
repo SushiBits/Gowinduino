@@ -689,7 +689,7 @@ TDI
 Wire Wire Line
 	8900 1200 8600 1200
 Wire Wire Line
-	8600 1400 8900 1400
+	8600 1400 8700 1400
 Wire Wire Line
 	8900 1500 8600 1500
 Wire Wire Line
@@ -774,12 +774,12 @@ Wire Wire Line
 	3600 1900 3800 1900
 Text Label 5400 1900 2    50   ~ 0
 MCLK
-Text Label 5400 2000 2    50   ~ 0
+Text Label 5400 2200 2    50   ~ 0
 ~RST
 Wire Wire Line
 	5400 1900 5200 1900
 Wire Wire Line
-	5200 2000 5400 2000
+	5200 2200 5400 2200
 $Comp
 L Device:C_Small C1
 U 1 1 60838592
@@ -1915,7 +1915,7 @@ Wire Wire Line
 	7100 4100 7100 4400
 NoConn ~ 5200 1600
 NoConn ~ 5200 2100
-NoConn ~ 5200 2200
+NoConn ~ 5200 2000
 NoConn ~ 8200 4100
 $Comp
 L Device:R_Small R15
@@ -1956,10 +1956,10 @@ CLK
 Wire Wire Line
 	8900 3800 8200 3800
 $Comp
-L Oscillator:XO32 X?
+L Oscillator:XO32 X1
 U 1 1 614E5976
 P 6000 3800
-F 0 "X?" H 6100 4100 50  0000 L CNN
+F 0 "X1" H 6100 4100 50  0000 L CNN
 F 1 "XO32" H 6100 3500 50  0000 L CNN
 F 2 "Oscillator:Oscillator_SMD_EuroQuartz_XO32-4Pin_3.2x2.5mm" H 6700 3450 50  0001 C CNN
 F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/XO32.pdf" H 5900 3800 50  0001 C CNN
@@ -1967,10 +1967,10 @@ F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/XO32.pdf" H 5900 3800 50  
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0161
 U 1 1 614E682A
 P 6000 4300
-F 0 "#PWR?" H 6000 4050 50  0001 C CNN
+F 0 "#PWR0161" H 6000 4050 50  0001 C CNN
 F 1 "GND" H 6005 4127 50  0000 C CNN
 F 2 "" H 6000 4300 50  0001 C CNN
 F 3 "" H 6000 4300 50  0001 C CNN
@@ -1978,10 +1978,10 @@ F 3 "" H 6000 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0162
 U 1 1 614E7306
 P 6000 3300
-F 0 "#PWR?" H 6000 3150 50  0001 C CNN
+F 0 "#PWR0162" H 6000 3150 50  0001 C CNN
 F 1 "+3V3" H 6015 3473 50  0000 C CNN
 F 2 "" H 6000 3300 50  0001 C CNN
 F 3 "" H 6000 3300 50  0001 C CNN
@@ -2002,12 +2002,12 @@ Wire Wire Line
 Wire Wire Line
 	6000 4100 6000 4200
 $Comp
-L Device:C_Small C?
+L Device:C_Small C23
 U 1 1 6153B909
 P 5600 4000
-F 0 "C?" H 5692 4046 50  0000 L CNN
+F 0 "C23" H 5692 4046 50  0000 L CNN
 F 1 "100n" H 5692 3955 50  0000 L CNN
-F 2 "" H 5600 4000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5600 4000 50  0001 C CNN
 F 3 "~" H 5600 4000 50  0001 C CNN
 	1    5600 4000
 	1    0    0    -1  
@@ -2026,4 +2026,116 @@ Text Label 6500 3800 2    50   ~ 0
 CLK
 Wire Wire Line
 	6500 3800 6300 3800
+$Comp
+L Device:R_Small R17
+U 1 1 6159B49A
+P 8700 2000
+F 0 "R17" H 8759 2046 50  0000 L CNN
+F 1 "10k" H 8759 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 8700 2000 50  0001 C CNN
+F 3 "~" H 8700 2000 50  0001 C CNN
+	1    8700 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 2200 8700 2200
+Wire Wire Line
+	8700 2200 8700 2100
+Wire Wire Line
+	8700 1900 8700 1400
+Connection ~ 8700 1400
+Wire Wire Line
+	8700 1400 8900 1400
+$Comp
+L Power_Supervisor:MAX811SEUS-T U11
+U 1 1 61631C5C
+P 4000 5400
+F 0 "U11" H 4100 5700 50  0000 L CNN
+F 1 "MAX811SEUS-T" H 4100 5100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 4100 5100 50  0001 L CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX811-MAX812.pdf" H 3650 4700 50  0001 C CNN
+	1    4000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0163
+U 1 1 6163469D
+P 4000 4800
+F 0 "#PWR0163" H 4000 4650 50  0001 C CNN
+F 1 "+3V3" H 4015 4973 50  0000 C CNN
+F 2 "" H 4000 4800 50  0001 C CNN
+F 3 "" H 4000 4800 50  0001 C CNN
+	1    4000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0164
+U 1 1 61635213
+P 4000 6000
+F 0 "#PWR0164" H 4000 5750 50  0001 C CNN
+F 1 "GND" H 4005 5827 50  0000 C CNN
+F 2 "" H 4000 6000 50  0001 C CNN
+F 3 "" H 4000 6000 50  0001 C CNN
+	1    4000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:SN74LVC1T45DBV U12
+U 1 1 61636B86
+P 5100 5400
+F 0 "U12" H 5250 5800 50  0000 L CNN
+F 1 "SN74LVC1T45DBV" H 5200 5000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5100 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf" H 4200 4750 50  0001 C CNN
+	1    5100 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4800 4000 4900
+Wire Wire Line
+	4000 4900 4600 4900
+Wire Wire Line
+	5000 4900 5000 5000
+Connection ~ 4000 4900
+Wire Wire Line
+	4000 4900 4000 5100
+Wire Wire Line
+	4700 5600 4600 5600
+Wire Wire Line
+	4600 5600 4600 4900
+Connection ~ 4600 4900
+Wire Wire Line
+	4600 4900 5000 4900
+Wire Wire Line
+	4700 5400 4400 5400
+Wire Wire Line
+	4000 5700 4000 5900
+Wire Wire Line
+	4000 5900 5100 5900
+Wire Wire Line
+	5100 5900 5100 5800
+Connection ~ 4000 5900
+Wire Wire Line
+	4000 5900 4000 6000
+$Comp
+L power:+1V8 #PWR0165
+U 1 1 6170C9A9
+P 5200 4800
+F 0 "#PWR0165" H 5200 4650 50  0001 C CNN
+F 1 "+1V8" H 5215 4973 50  0000 C CNN
+F 2 "" H 5200 4800 50  0001 C CNN
+F 3 "" H 5200 4800 50  0001 C CNN
+	1    5200 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4800 5200 5000
+Text Label 3300 5400 0    50   ~ 0
+~RESET
+Text Label 5700 5400 2    50   ~ 0
+~RST
+Wire Wire Line
+	5700 5400 5500 5400
+Wire Wire Line
+	3300 5400 3600 5400
 $EndSCHEMATC
