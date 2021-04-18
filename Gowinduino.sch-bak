@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date "lun. 30 mars 2015"
 Rev ""
@@ -1438,10 +1438,10 @@ F 3 "" H 10800 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0128
 U 1 1 60B7E047
 P 7300 5100
-F 0 "#PWR?" H 7300 4950 50  0001 C CNN
+F 0 "#PWR0128" H 7300 4950 50  0001 C CNN
 F 1 "+3V3" H 7315 5273 50  0000 C CNN
 F 2 "" H 7300 5100 50  0001 C CNN
 F 3 "" H 7300 5100 50  0001 C CNN
@@ -1449,14 +1449,239 @@ F 3 "" H 7300 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0131
 U 1 1 60B7EBC9
 P 9400 5100
-F 0 "#PWR?" H 9400 4950 50  0001 C CNN
+F 0 "#PWR0131" H 9400 4950 50  0001 C CNN
 F 1 "+3V3" H 9415 5273 50  0000 C CNN
 F 2 "" H 9400 5100 50  0001 C CNN
 F 3 "" H 9400 5100 50  0001 C CNN
 	1    9400 5100
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 1000 5500 1500 2000
+U 60B8EB7D
+F0 "USB Interface" 50
+F1 "USB.sch" 50
+F2 "TCK" O R 2500 5600 50 
+F3 "TDI" O R 2500 5800 50 
+F4 "TDO" I R 2500 5900 50 
+F5 "TMS" O R 2500 5700 50 
+F6 "TXD" O R 2500 6100 50 
+F7 "RXD" I R 2500 6200 50 
+$EndSheet
+$Comp
+L Device:R_Small R7
+U 1 1 60B94904
+P 6900 5300
+F 0 "R7" H 6959 5346 50  0000 L CNN
+F 1 "10k" H 6959 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 6900 5300 50  0001 C CNN
+F 3 "~" H 6900 5300 50  0001 C CNN
+	1    6900 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 60B95D37
+P 6900 5800
+F 0 "SW2" V 6854 5948 50  0000 L CNN
+F 1 "Reset" V 6945 5948 50  0000 L CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 6900 6000 50  0001 C CNN
+F 3 "~" H 6900 6000 50  0001 C CNN
+	1    6900 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0134
+U 1 1 60BA7526
+P 6900 5100
+F 0 "#PWR0134" H 6900 4950 50  0001 C CNN
+F 1 "+3V3" H 6915 5273 50  0000 C CNN
+F 2 "" H 6900 5100 50  0001 C CNN
+F 3 "" H 6900 5100 50  0001 C CNN
+	1    6900 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0135
+U 1 1 60BA7E1E
+P 6900 6100
+F 0 "#PWR0135" H 6900 5850 50  0001 C CNN
+F 1 "GND" H 6905 5927 50  0000 C CNN
+F 2 "" H 6900 6100 50  0001 C CNN
+F 3 "" H 6900 6100 50  0001 C CNN
+	1    6900 6100
+	1    0    0    -1  
+$EndComp
+Text Label 6600 5500 0    50   ~ 0
+~RESET
+Wire Wire Line
+	6900 5100 6900 5200
+Wire Wire Line
+	6900 5400 6900 5500
+Wire Wire Line
+	6900 6000 6900 6100
+Wire Wire Line
+	6600 5500 6900 5500
+Connection ~ 6900 5500
+Wire Wire Line
+	6900 5500 6900 5600
+Text Label 2700 5600 2    50   ~ 0
+JTCK
+Text Label 2700 5700 2    50   ~ 0
+JTMS
+Text Label 2700 5800 2    50   ~ 0
+JTDI
+Text Label 2700 5900 2    50   ~ 0
+JTDO
+Text Label 2700 6200 2    50   ~ 0
+TX
+Text Label 2700 6100 2    50   ~ 0
+RX
+Wire Wire Line
+	2700 5600 2500 5600
+Wire Wire Line
+	2500 5700 2700 5700
+Wire Wire Line
+	2700 5800 2500 5800
+Wire Wire Line
+	2500 5900 2700 5900
+Wire Wire Line
+	2700 6100 2500 6100
+Wire Wire Line
+	2500 6200 2700 6200
+$Comp
+L Connector:Barrel_Jack_Switch J?
+U 1 1 60E12F95
+P 1200 4700
+F 0 "J?" H 1257 5017 50  0000 C CNN
+F 1 "12V" H 1257 4926 50  0000 C CNN
+F 2 "" H 1250 4660 50  0001 C CNN
+F 3 "~" H 1250 4660 50  0001 C CNN
+	1    1200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 60E144A6
+P 1700 4600
+F 0 "D?" H 1700 4807 50  0000 C CNN
+F 1 "M7" H 1700 4716 50  0000 C CNN
+F 2 "" V 1700 4600 50  0001 C CNN
+F 3 "~" V 1700 4600 50  0001 C CNN
+	1    1700 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U?
+U 1 1 60E15206
+P 2300 4600
+F 0 "U?" H 2300 4842 50  0000 C CNN
+F 1 "L7805" H 2300 4751 50  0000 C CNN
+F 2 "" H 2325 4450 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2300 4550 50  0001 C CNN
+	1    2300 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 60E16E55
+P 1900 4800
+F 0 "C?" H 1988 4846 50  0000 L CNN
+F 1 "10µ" H 1988 4755 50  0000 L CNN
+F 2 "" H 1900 4800 50  0001 C CNN
+F 3 "~" H 1900 4800 50  0001 C CNN
+	1    1900 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60E17F0B
+P 1600 5100
+F 0 "#PWR?" H 1600 4850 50  0001 C CNN
+F 1 "GND" H 1605 4927 50  0000 C CNN
+F 2 "" H 1600 5100 50  0001 C CNN
+F 3 "" H 1600 5100 50  0001 C CNN
+	1    1600 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 60E18F98
+P 1900 4500
+F 0 "#PWR?" H 1900 4350 50  0001 C CNN
+F 1 "+12V" H 1915 4673 50  0000 C CNN
+F 2 "" H 1900 4500 50  0001 C CNN
+F 3 "" H 1900 4500 50  0001 C CNN
+	1    1900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60E1991A
+P 2800 4600
+F 0 "#PWR?" H 2800 4450 50  0001 C CNN
+F 1 "+5V" V 2815 4728 50  0000 L CNN
+F 2 "" H 2800 4600 50  0001 C CNN
+F 3 "" H 2800 4600 50  0001 C CNN
+	1    2800 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 60E1ABAD
+P 2700 4800
+F 0 "C?" H 2788 4846 50  0000 L CNN
+F 1 "47µ" H 2788 4755 50  0000 L CNN
+F 2 "" H 2700 4800 50  0001 C CNN
+F 3 "~" H 2700 4800 50  0001 C CNN
+	1    2700 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4600 1600 4600
+Wire Wire Line
+	1800 4600 1900 4600
+Wire Wire Line
+	1900 4500 1900 4600
+Connection ~ 1900 4600
+Wire Wire Line
+	1900 4600 2000 4600
+Wire Wire Line
+	1900 4600 1900 4700
+Wire Wire Line
+	1500 4700 1600 4700
+Wire Wire Line
+	1600 4700 1600 4800
+Wire Wire Line
+	1500 4800 1600 4800
+Connection ~ 1600 4800
+Wire Wire Line
+	1600 4800 1600 5000
+Wire Wire Line
+	1600 5000 1900 5000
+Wire Wire Line
+	2700 5000 2700 4900
+Connection ~ 1600 5000
+Wire Wire Line
+	1600 5000 1600 5100
+Wire Wire Line
+	2600 4600 2700 4600
+Wire Wire Line
+	2700 4700 2700 4600
+Connection ~ 2700 4600
+Wire Wire Line
+	2700 4600 2800 4600
+Wire Wire Line
+	2300 4900 2300 5000
+Connection ~ 2300 5000
+Wire Wire Line
+	2300 5000 2700 5000
+Wire Wire Line
+	1900 4900 1900 5000
+Connection ~ 1900 5000
+Wire Wire Line
+	1900 5000 2300 5000
 $EndSCHEMATC
