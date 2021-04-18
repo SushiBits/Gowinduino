@@ -2213,10 +2213,6 @@ Wire Wire Line
 Wire Wire Line
 	7500 5300 7500 5400
 Wire Wire Line
-	7200 5100 7200 5200
-Wire Wire Line
-	7200 5200 7900 5200
-Wire Wire Line
 	7900 5200 7900 5400
 Wire Wire Line
 	7500 5600 7500 5900
@@ -2306,4 +2302,9 @@ Wire Wire Line
 Connection ~ 6600 5800
 Wire Wire Line
 	6300 6100 7200 6100
+Wire Wire Line
+	7300 5100 7300 5200
+Wire Wire Line
+	7300 5200 7900 5200
+NoConn ~ 7200 5100
 $EndSCHEMATC
