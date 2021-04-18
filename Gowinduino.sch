@@ -480,17 +480,6 @@ F 3 "http://cdn.gowinsemi.com.cn/DS861-1.4.3_GW1NSR%E7%B3%BB%E5%88%97FPGA%E4%BA%
 	3    6700 1200
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+1V8 #PWR0111
-U 1 1 6081734C
-P 7300 1000
-F 0 "#PWR0111" H 7300 850 50  0001 C CNN
-F 1 "+1V8" V 7315 1128 50  0000 L CNN
-F 2 "" H 7300 1000 50  0001 C CNN
-F 3 "" H 7300 1000 50  0001 C CNN
-	1    7300 1000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7100 1000 7300 1000
 Wire Wire Line
@@ -2327,4 +2316,15 @@ Wire Wire Line
 Connection ~ 6700 2800
 Wire Wire Line
 	6700 2800 6700 2900
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61B37E61
+P 7300 1000
+F 0 "#PWR?" H 7300 850 50  0001 C CNN
+F 1 "+3V3" V 7315 1128 50  0000 L CNN
+F 2 "" H 7300 1000 50  0001 C CNN
+F 3 "" H 7300 1000 50  0001 C CNN
+	1    7300 1000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

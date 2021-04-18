@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title ""
-Date "lun. 30 mars 2015"
-Rev ""
-Comp ""
-Comment1 ""
+Title "Gowinduino"
+Date "2021-04-18"
+Rev "1.0"
+Comp "SushiBits"
+Comment1 "© 2021 Max Chan. https://sushibits.info/"
 Comment2 ""
 Comment3 ""
 Comment4 ""
