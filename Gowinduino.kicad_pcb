@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 60)
+    (drawings 62)
     (tracks 1292)
     (zones 0)
     (modules 84)
@@ -3974,10 +3974,16 @@
     (pad 1 thru_hole circle (at 0 0) (size 4.064 4.064) (drill 3.048) (layers *.Cu *.Mask F.SilkS))
   )
 
+  (gr_text RESET (at 117.348 81.28) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_text JLCJLCJLC (at 112.903 118.745 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
   (gr_text "SushiBits\nM1DKv1-GW1MCU" (at 171.323 88.265) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify right))
   )
-  (gr_text "© 2021 Max Chan.\nhttps://sushibits.info/" (at 170.688 116.84) (layer F.SilkS)
+  (gr_text "© 2021 Max Chan.\nhttps://sushibits.info/" (at 171.323 116.84) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify right))
   )
   (gr_text Gowinduino (at 150.368 84.455) (layer F.SilkS)
